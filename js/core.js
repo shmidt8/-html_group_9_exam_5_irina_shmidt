@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
-
-
-$('#phone').inputmask({ mask: "0 (999) 99-99-99", clearIncomplete: true,
-   onincomplete: function(){
-        $(this).addClass('error').removeClass('active');           
-      },
-   oncomplete: function(){
-        $(this).removeClass('error').addClass('active');            
-      }   
-  });
+	$('#menu-btn').click(function(){		
+			$('.menu').slideToggle(700);	
+			if ($(this).hasClass('not-active')) {
+				$(this).addClass('is-active').removeClass('not-active');
+			}else{
+				setTimeout(function(){
+					$('.is-active').addClass('not-active').removeClass('is-active')
+				},600)			
+			}		
+		});
 
 });

@@ -1,0 +1,69 @@
+@media screen and (max-width: 800px){
+	.menu-btn{
+		float: right;
+		width: 70px;
+		height: 70px;
+		position: relative;
+		background: #4b3f55;
+	}
+	.menu-btn span{
+		width: 18px;
+		height: 2px;
+		background: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -1px 0 0 -9px;
+	}
+	.menu-btn span::before, .menu-btn span::after{
+		width: 18px;
+		height: 2px;
+		background: #fff;
+		position: absolute;
+		left: 0;
+		transition: transform 1s;
+	}
+	.menu-btn span::before{
+		content: "";
+		top: -5px;
+	}
+	.menu-btn span::after{
+		content: "";
+		bottom: -5px;
+	}
+	.menu-btn.is-active span{
+		background: transparent;
+	}
+	.menu-btn.is-active span::before{
+		transform: rotate(45deg);
+		top: 0;
+	}
+	.menu-btn.is-active span::after{
+		transform: rotate(-45deg);
+		bottom: 0;
+	}
+	.menu{
+		display: none;
+		position: absolute;
+		width: 200px;
+		background: #4b3f55;
+		top: 70px;
+		right: 0;
+	}
+	.menu ul{
+		margin: 0;
+		padding: 3px 15px;
+		list-style: none;
+	}
+	.menu a{
+		display: block;
+		padding: 5px 5px;
+		color: #fff;
+		text-decoration: none;
+		text-transform: uppercase;
+		border-bottom: 2px solid #f8e1b4;
+	}
+	.menu li:last-child a{
+		border-bottom: none;
+	}
+}
